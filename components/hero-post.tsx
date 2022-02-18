@@ -1,30 +1,38 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import Author from '../types/author'
+import Link from "next/link";
+import Author from "../types/author";
+import Avatar from "./avatar";
+import DateFormatter from "./date-formatter";
+import CoverImage from "./cover-image";
 
-type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt: string
-  author: Author
-  slug: string
+// type HeroPostProps = {
+//   title: string
+//   coverImage: string
+//   date: string
+//   excerpt: string
+//   author: Author
+//   slug: string
+// }
+interface HeroPostProps {
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
+  author: Author;
+  slug: string;
 }
 
-const HeroPost = ({
+const HeroPost: React.FC<HeroPostProps> = ({
   title,
   coverImage,
   date,
   excerpt,
   author,
   slug,
-}: Props) => {
+}) => {
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+        <CoverImage slug={slug} src={coverImage} title={title} />
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
@@ -43,7 +51,7 @@ const HeroPost = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroPost
+export default HeroPost;
