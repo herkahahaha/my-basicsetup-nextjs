@@ -22,7 +22,7 @@ const Index: React.FC<IndexProps> = ({ allPosts }) => {
       </Head>
       <Container>
         <Intro />
-        {heroPost && (
+        {heroPost ? (
           <HeroPost
             author={heroPost.author}
             coverImage={heroPost.coverImage}
@@ -31,8 +31,8 @@ const Index: React.FC<IndexProps> = ({ allPosts }) => {
             slug={heroPost.slug}
             title={heroPost.title}
           />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        ) : null}
+        {morePosts.length > 0 ? <MoreStories posts={morePosts} /> : null}
       </Container>
     </Layout>
   );

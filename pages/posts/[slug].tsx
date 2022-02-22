@@ -15,11 +15,11 @@ import PostType from "../../types/post";
 
 interface PostProps {
   post: PostType;
-  morePosts: PostType[];
+  morePosts?: PostType[];
   preview?: boolean;
 }
 
-const Post: React.FC<PostProps> = ({ post, morePosts, preview }) => {
+const Post: React.FC<PostProps> = ({ post, preview }) => {
   const router = useRouter();
   if (!router.isFallback && !post.slug) {
     return <ErrorPage statusCode={404} />;

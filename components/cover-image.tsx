@@ -9,8 +9,9 @@ type CoverImageProps = {
 
 const CoverImage = ({ title, src, slug }: CoverImageProps) => {
   const image = (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
-      alt={`Cover Image for ${title}`}
+      alt={`Cover for ${title}`}
       className={cn("shadow-sm", {
         "hover:shadow-lg transition-shadow duration-200": slug,
       })}
