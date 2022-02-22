@@ -12,3 +12,5 @@ To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) a
 # Notes
 
 `blog-starter-typescript` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+my reference setup from [wargabantuwarga](https://wargabantuwarga.com) very helpfull, love u hardwork guys :*
+
